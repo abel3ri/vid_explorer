@@ -27,7 +27,7 @@ html {
 .login-container,
 .signup-container {
   position: absolute;
-  top: 20%;
+  top: 15%;
   display: flex;
   flex-direction: column;
   align-items: center;
