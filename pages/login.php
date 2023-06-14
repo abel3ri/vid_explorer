@@ -29,7 +29,7 @@ $errorMessage = [
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
   </head>
-  <link rel="stylesheet" href="./styles/style.css" />
+  <link rel="stylesheet" href="../styles/style.css" />
   <body>
     <div class="form-container">
       <div class="login-container">
@@ -57,7 +57,7 @@ $errorMessage = [
         </form>
         <div class="prompt-container">
           <p>Don't have an account?</p>
-          <a href="./signup.html" class="go-to-form signup-btn">Sign up</a>
+          <a href="./signup.php" class="go-to-form signup-btn">Sign up</a>
         </div>
       </div>
     </div>

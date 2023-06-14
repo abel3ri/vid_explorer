@@ -10,3 +10,18 @@ if ((headingText = document.querySelector(".get-started-container h1"))) {
     goBackBtn.classList.add("animate");
   });
 }
+
+if ((signUpErrorMessage = document.querySelector(".error-message"))) {
+  const closeBtn = document.querySelector(".close-btn");
+  if (signUpErrorMessage.classList.contains("taken")) {
+    setTimeout(() => {
+      signUpErrorMessage.classList.add("show");
+    }, 10);
+    closeBtn.addEventListener("click", () => {
+      signUpErrorMessage.classList.remove("show");
+    });
+    setTimeout(() => {
+      signUpErrorMessage.classList.remove("show");
+    }, 3000);
+  }
+}
