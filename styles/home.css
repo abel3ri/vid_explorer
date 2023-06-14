@@ -10,14 +10,35 @@ html {
 }
 .nav {
   height: 5rem;
-  margin: 1rem;
+  box-shadow: 1px 2px 3px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+hr {
+  position: absolute;
+  width: 80%;
+}
+.logo:is(:link, :visited) {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #000;
+  font-size: 2rem;
+  font-weight: 600;
+  text-decoration: none;
+  z-index: 100;
+  background-color: #fff;
+}
+span {
+  color: #0066ff;
+  margin-left: 10px;
 }
 .get-started-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1.2rem;
+  gap: 2rem;
   min-height: 50rem;
 }
 .btns {
@@ -25,7 +46,7 @@ html {
   gap: 1rem;
 }
 h1 {
-  font-size: 4rem;
+  font-size: 6rem;
 
   transform: translateY(-30rem);
   opacity: 0;
@@ -34,15 +55,16 @@ h1 {
 .btn:is(:link, :visited) {
   text-decoration: none;
   color: #fff;
-  border: 1.5px solid #0066ff;
-  color: #0066ff;
+  border: 1.5px solid #000;
+  color: #000;
   font-weight: 600;
   padding: 1.5rem 3rem;
 
   transition: all 0.3s;
 }
+/* background-color: #0066ffcf; */
 .btn:is(:hover, :active) {
-  background-color: #0066ffcf;
+  background-color: #000000db;
   color: #fff;
 }
 .login-btn {
