@@ -57,7 +57,7 @@ $errorMessage = [
         </form>
         <div class="prompt-container">
           <p>Don't have an account?</p>
-          <a href="./signup.html" class="go-to-form signup-btn">Sign up</a>
+          <a href="./pages/signup.php" class="go-to-form signup-btn">Sign up</a>
         </div>
       </div>
     </div>
