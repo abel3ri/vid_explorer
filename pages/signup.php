@@ -19,7 +19,7 @@
     }  
    catch(Exception $e){
     if($e->getCode() == 23000){
-      $val = "taken";      
+      $val = "error";      
     };
   }
 }

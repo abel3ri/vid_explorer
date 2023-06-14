@@ -89,6 +89,8 @@ html {
   margin-bottom: 10px;
 }
 
+/* Popup error style */
+
 .error-message {
   top: -3rem;
   position: absolute;

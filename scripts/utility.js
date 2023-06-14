@@ -11,17 +11,17 @@ if ((headingText = document.querySelector(".get-started-container h1"))) {
   });
 }
 
-if ((signUpErrorMessage = document.querySelector(".error-message"))) {
+if ((formPopUp = document.querySelector(".error-message"))) {
   const closeBtn = document.querySelector(".close-btn");
-  if (signUpErrorMessage.classList.contains("taken")) {
+  if (formPopUp.classList.contains("error")) {
     setTimeout(() => {
-      signUpErrorMessage.classList.add("show");
+      formPopUp.classList.add("show");
     }, 10);
     closeBtn.addEventListener("click", () => {
-      signUpErrorMessage.classList.remove("show");
+      formPopUp.classList.remove("show");
     });
     setTimeout(() => {
-      signUpErrorMessage.classList.remove("show");
+      formPopUp.classList.remove("show");
     }, 3000);
   }
 }

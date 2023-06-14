@@ -1,9 +1,10 @@
 <?php 
-
+include "../helper/db_conn.php";
 $errorMessage = [
   "emailErrMessage" => "",
   "passwordErrMessage" => "",
 ];
+$val = "";
  if(isset($_POST['submit'])){
   $email = $_POST['email'];
   $password = $_POST['password'];
@@ -20,7 +21,28 @@ $errorMessage = [
   } else if(strlen($password) < 8){
     $errorMessage['passwordErrMessage'] = "Password must be at least 8 characters long";
   } else  $errorMessage['passwordErrMessage'] = "";
- }
+
+  $isValid = false;
+  foreach($errorMessage as $key => $value){
+    if($value == "") $isValid = true;
+  }
+
+  if($isValid){
+    $sql = "SELECT * FROM users WHERE email = :email AND password = :password;";
+
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute(['email' => $email,"password" => $password]);
+
+    if($stmt->rowCount() == 0){
+      $val = "error";
+    } else {
+      session_start();
+      $_SESSION['email'] = $email;
+      header("location:../pages/dashboard.html");
+    }
+    }
+
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,6 +55,23 @@ $errorMessage = [
   <body>
     <div class="form-container">
       <div class="login-container">
+      <div class="error-message <?php echo $val ?>">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="close-btn"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+          <p>Incorrect email or password</p>
+        </div>
         <h1>Welcome back</h1>
         <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" novalidate>
           <div>
@@ -61,5 +100,6 @@ $errorMessage = [
         </div>
       </div>
     </div>
+    <script src="../scripts/utility.js"></script>
   </body>
 </html>
