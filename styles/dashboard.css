@@ -1,0 +1,80 @@
+/* #FF0066 Primary color */
+/* #BB004B  Secondary Color*/
+
+/* #002233 
+  #0066FF
+*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&family=Roboto+Slab&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+}
+.nav {
+  height: 5rem;
+  box-shadow: 1px 2px 3px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+hr {
+  position: absolute;
+  width: 80%;
+}
+.logo:is(:link, :visited) {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #000;
+  font-size: 2rem;
+  font-weight: 600;
+  text-decoration: none;
+  z-index: 100;
+  background-color: #fff;
+}
+span {
+  color: #0066ff;
+  margin-left: 10px;
+}
+
+.vid-container {
+  max-width: 60rem;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  gap: 6rem;
+}
+video {
+  width: 40rem;
+  height: 45rem;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #002233;
+}
+
+.upload-container {
+  width: 90vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 2rem auto 4rem auto;
+}
+
+input[type="file"]::file-selector-button {
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .vid-container {
+    grid-template-columns: 1fr;
+  }
+}
