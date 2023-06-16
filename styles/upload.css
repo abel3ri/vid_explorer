@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&family=Roboto+Slab&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Poppins", sans-serif;
+}
+.message-container {
+  position: relative;
+  background-color: rgba(211, 211, 211, 0.555);
+  padding: 0.5rem;
+  user-select: none;
+}
+.message-container p {
+  display: inline;
+  font-size: 0.8rem;
+}
+.close-btn {
+  cursor: pointer;
+  position: absolute;
+  right: -1rem;
+  top: -1rem;
+  width: 1.2rem;
+}
+.hidden {
+  display: none;
+}
+.upload-container {
+  max-width: 35rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  /* background-color: orangered; */
+}
+form {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+input {
+  height: 3rem;
+  width: 25rem;
+  text-align: center;
+}
+.video-input {
+  background-color: #fff;
+}
+.title-input,
+.uploader-input,
+.date-input {
+  border: none;
+  background-color: rgb(233, 233, 233);
+  border-radius: 4px;
+}
+.video-input::file-selector-button {
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+  padding: 1rem 2rem;
+  margin-right: 4rem;
+}
+.submit-btn {
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+}
+.title-input:is(:focus),
+.uploader-input:is(:focus) {
+  outline: 1px solid #0000006b;
+}
+.date-input {
+  padding: 0 2rem;
+}
+
+.error {
+  color: red;
+  font-weight: 600;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
