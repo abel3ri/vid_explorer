@@ -89,3 +89,25 @@ input {
   font-size: 0.8rem;
   margin-bottom: 10px;
 }
+
+.pop-up-error {
+  background-color: red;
+  color: #fff;
+  max-width: 12rem;
+  margin: 0 auto;
+  text-align: center;
+  transition: all 0.3s;
+  transform: translateY(-10rem);
+}
+.pop-up-close {
+  cursor: pointer;
+  top: -0.5rem;
+  right: -1rem;
+  position: absolute;
+  width: 1rem;
+  color: #000;
+}
+
+.show {
+  transform: translateY(2rem);
+}

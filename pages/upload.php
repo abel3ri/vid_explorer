@@ -7,6 +7,23 @@
     <link rel="stylesheet" href="../styles/upload.css" />
   </head>
   <body>
+    <div class="pop-up-error <?php if(isset($_GET['val'])) echo $_GET['val']; ?>">
+    <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="pop-up-close"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      <p>Email not registered</p>
+    </div>
     <div class="upload-container">
       <div class="message-container">
         <svg
@@ -30,10 +47,20 @@
         </p>
       </div>
       <h1>Upload your video</h1>
-      <form action="" novalidate>
+      <form
+        action="../helper/post.php"
+        method="post"
+        novalidate
+        enctype="multipart/form-data"
+      >
         <div>
           <p class="error"></p>
-          <input type="text" class="title-input" placeholder="Video title" />
+          <input
+            type="text"
+            class="title-input"
+            placeholder="Video title"
+            name="title"
+          />
         </div>
         <div>
           <p class="error"></p>
@@ -41,14 +68,23 @@
             type="text"
             class="uploader-input"
             placeholder="Uploader email"
+            name="uploader"
           />
         </div>
-        <input type="datetime-local" class="date-input" />
         <div>
           <p class="error"></p>
-          <input type="file" accept="video/*" class="video-input" />
+          <input
+            type="datetime-local"
+            class="date-input"
+            disabled
+            name="date"
+          />
         </div>
-        <input type="submit" class="submit-btn" value="Upload" />
+        <div>
+          <p class="error"></p>
+          <input type="file" name="file" accept="video/*" class="video-input" />
+        </div>
+        <input type="submit" name="submit" class="submit-btn" value="Upload" />
       </form>
     </div>
     <script src="../scripts/uploadValidator.js"></script>
