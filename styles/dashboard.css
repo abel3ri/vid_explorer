@@ -46,7 +46,7 @@ span {
   display: grid;
   grid-template-columns: 1fr 1fr;
   place-items: center;
-  gap: 6rem;
+  gap: 3rem;
 }
 video {
   width: 40rem;
@@ -55,24 +55,20 @@ video {
   overflow: hidden;
   background-color: #002233;
 }
-
-.upload-container {
-  width: 90vw;
-  margin: 0 auto;
+.desc-container {
+  width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-evenly;
+  font-size: 1.2rem;
+}
+.like-container {
+  display: flex;
   align-items: center;
-  margin: 2rem auto 4rem auto;
 }
-
-input[type="file"]::file-selector-button {
+.like-btn {
   cursor: pointer;
-  background-color: #000;
-  color: #fff;
-  padding: 1rem 2rem;
-  border-radius: 4px;
+  width: 2rem;
 }
-
 @media (max-width: 768px) {
   .vid-container {
     grid-template-columns: 1fr;
