@@ -25,3 +25,16 @@ if ((formPopUp = document.querySelector(".error-message"))) {
     }, 3000);
   }
 }
+
+if ((overlay = document.querySelector(".overlay"))) {
+  const closeBtn = document.querySelector(".close-btn");
+  const menuBtn = document.querySelector(".menu-btn");
+
+  menuBtn.addEventListener("click", () => {
+    overlay.classList.remove("hidden");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    overlay.classList.add("hidden");
+  });
+}
