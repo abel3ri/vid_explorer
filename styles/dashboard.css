@@ -14,12 +14,23 @@ html {
   font-family: "Poppins", sans-serif;
   font-size: 10px;
 }
+body {
+  overflow-x: hidden;
+}
 .nav {
+  position: relative;
   height: 5rem;
   box-shadow: 1px 2px 3px 5px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.menu-btn {
+  position: absolute;
+  cursor: pointer;
+  top: 1rem;
+  right: 1rem;
+  width: 3rem;
 }
 hr {
   position: absolute;
@@ -81,6 +92,53 @@ video {
 .like-btn {
   cursor: pointer;
   width: 2rem;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 35vw;
+  height: 100vh;
+  background-color: #000;
+  transform: translateX(0);
+
+  transition: transform 0.3s;
+}
+.hidden {
+  transform: translateX(100rem);
+  /* height: 0; */
+}
+.close-btn {
+  cursor: pointer;
+  width: 3rem;
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  color: #fff;
+}
+.overlay-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  height: 60%;
+}
+.overlay-btn:is(:link, :visited) {
+  color: #000;
+  font-size: 2rem;
+  text-decoration: none;
+  background-color: #fff;
+  padding: 0.5rem 3rem;
+  border-radius: 4px;
+  max-width: 100%;
+}
+.overlay-icon {
+  width: 2.4rem;
+}
+.overlay-btn {
+  display: flex;
+  gap: 5px;
 }
 @media (max-width: 768px) {
   .vid-container {
