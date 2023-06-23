@@ -13,7 +13,7 @@
         $stmt = $pdo->prepare($sql);
         $result = $stmt->execute([$name, $email, $password]);
         if($result){
-          header("location:../pages/home.html");
+          header("location:../pages/dashboard.php");
         } 
     
     }  

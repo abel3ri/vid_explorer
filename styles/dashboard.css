@@ -73,7 +73,6 @@ video {
   width: 40rem;
   height: 45rem;
   border-radius: 4px;
-  overflow: hidden;
   background-color: #002233;
 }
 .vid-title {
@@ -92,6 +91,9 @@ video {
 .like-btn {
   cursor: pointer;
   width: 2rem;
+}
+.like-count {
+  user-select: none;
 }
 .overlay {
   position: fixed;
