@@ -17,7 +17,7 @@ include "../helper/db_conn.php";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Profile</title>
+    <title>Profile Details</title>
     <link rel="stylesheet" href="../styles/profile.css" />
   </head>
   <body>
@@ -38,10 +38,10 @@ include "../helper/db_conn.php";
           />
         </svg>
         <a href="#" class="home-btn">Home</a>
-        <a href="#" class="logout-btn">Logout</a>
+        <a href="../helper/logout.php" class="logout-btn">Logout</a>
       </div>
       <div class="right-container">
-        <h1 class="profile-text">Profile</h1>
+        <h1 class="profile-text">Profile Details</h1>
         <div class="profile-details-container">
           <div>
             <p>Name</p>
