@@ -17,7 +17,7 @@ html {
 .left-container {
   /* background-color: brown; */
 
-  padding: 2rem 0;
+  padding: 1rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,12 +25,13 @@ html {
   height: 100vh;
 }
 a:is(:link, :visited) {
-  width: 10rem;
+  width: 75%;
   text-align: center;
-  background-color: #000;
+  background-color: #1d2951;
+  border: 1px solid #000;
   color: #fff;
   text-decoration: none;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   padding: 1rem 2rem;
   border-radius: 4px;
 
@@ -38,13 +39,14 @@ a:is(:link, :visited) {
 }
 
 a:is(:active, :hover) {
-  background-color: #fff;
-  outline: 1px solid #000;
-  color: #000;
+  background-color: #000;
+  color: #fff;
 }
 
 .logout-btn:is(:link, :visited) {
-  background-color: red;
+  background-color: rgb(229, 91, 91);
+  color: #fff;
+  border: none;
 }
 .logout-btn:is(:hover, :active) {
   background-color: rgb(176, 4, 4);
@@ -56,16 +58,18 @@ a:is(:active, :hover) {
 .right-container {
   /* background-color: orange; */
   /* transform: translateY(10rem); */
-  padding: 0 1rem;
+  padding: 0 2rem;
   max-width: 50rem;
 }
 .profile-text {
-  font-size: 2.6rem;
+  font-size: 3rem;
   margin: 2rem 0 6rem 0;
+  color: #ff4500;
 }
 .profile-pic {
   margin-bottom: 2rem;
-  width: 10rem;
+  max-width: 60%;
+  color: #1d2951;
 }
 .profile-details-container {
   display: flex;
@@ -77,6 +81,11 @@ a:is(:active, :hover) {
   display: flex;
   justify-content: space-between;
   font-weight: 600;
+  font-size: clamp(1rem, 1.2rem, 2rem);
+}
+.profile-details-container div p:last-child {
+  font-weight: 900;
+  color: #ff4500;
 }
 
 .profile-details-container hr {
