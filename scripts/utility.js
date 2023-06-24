@@ -38,3 +38,42 @@ if ((overlay = document.querySelector(".overlay"))) {
     overlay.classList.add("hidden");
   });
 }
+
+if ((likeContainer = document.querySelector(".like-container"))) {
+  const vidContainer = document.querySelector(".vid-container");
+  vidContainer.addEventListener("click", (e) => {
+    if (e.target.tagName == "svg") {
+      e.preventDefault();
+      let likeCount = e.target.parentElement.nextElementSibling.textContent;
+
+      // Which videos like count is going to be incremented?
+
+      const vidId = e.target.parentElement.nextElementSibling.classList[1];
+
+      e.target.parentElement.nextElementSibling.textContent =
+        parseInt(likeCount) + 1;
+
+      // Prevent the URL from appending itself everytime the button is cliked
+
+      window.history.pushState({}, null, window.location.href.split("?")[0]);
+      // window.location.href = window.location.href.split("?")[0];
+
+      // Pass the video id and the like count to PHP file through the URL
+
+      // window.history.pushState(
+      //   {},
+      //   null,
+      //   window.location.href +
+      //     `?vid_id=${vidId}&like_count=${parseInt(likeCount) + 1}`
+      // );
+
+      window.location.href =
+        window.location.href +
+        `?vid_id=${vidId}&like_count=${parseInt(likeCount) + 1}`;
+    }
+  });
+}
+
+// window.addEventListener("load", () => {
+//   window.location.href = window.location.href.split("?")[0];
+// });
