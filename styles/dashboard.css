@@ -36,6 +36,7 @@ hr {
   position: absolute;
   width: 80%;
 }
+
 .logo:is(:link, :visited) {
   letter-spacing: 5px;
   text-transform: uppercase;
@@ -53,7 +54,7 @@ span {
 
 .vid-container {
   max-width: 60rem;
-  margin: 2rem auto;
+  margin: 4rem auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   place-items: center;
@@ -75,6 +76,7 @@ video {
   border-radius: 4px;
   background-color: #002233;
 }
+
 .vid-title {
   font-weight: 600;
 }
@@ -96,6 +98,31 @@ video {
 .like-count {
   user-select: none;
 }
+
+/* FOOTER */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 5rem;
+  background-color: #000;
+  text-align: center;
+  margin-top: 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.upload-btn {
+  text-transform: uppercase;
+  padding: 2rem 0;
+  text-decoration: none;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+/* OVERLAY */
 .overlay {
   position: fixed;
   top: 0;

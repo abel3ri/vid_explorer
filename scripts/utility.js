@@ -60,12 +60,12 @@ if ((likeContainer = document.querySelector(".like-container"))) {
 
       // Pass the video id and the like count to PHP file through the URL
 
-      // window.history.pushState(
-      //   {},
-      //   null,
-      //   window.location.href +
-      //     `?vid_id=${vidId}&like_count=${parseInt(likeCount) + 1}`
-      // );
+      window.history.pushState(
+        {},
+        null,
+        window.location.href +
+          `?vid_id=${vidId}&like_count=${parseInt(likeCount) + 1}`
+      );
 
       window.location.href =
         window.location.href +
@@ -73,7 +73,3 @@ if ((likeContainer = document.querySelector(".like-container"))) {
     }
   });
 }
-
-// window.addEventListener("load", () => {
-//   window.location.href = window.location.href.split("?")[0];
-// });
